@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import LinkedIn from '../components/icons/LinkedIn.astro';
+import GitHub from '../components/icons/GitHub.astro';
+import YouTube from '../components/icons/YouTube.astro';
+import SocialPill from '../components/icons/SocialPill.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<section class="w-full mx-auto lg:w-[740px] py-44">
+			<img 
+				src="https://img-c.udemycdn.com/user/200_H/121794209_78af_10.jpg" 
+				alt="pablo photo"
+				class="rounded-full w-12 h-12 mb-4"
+			>
+			<h1 class=" text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">Hey, soy AsensiDev 
+				<a href="https://www.linkedin.com/in/pablo-asensi-cano-405220219/"  
+				   class="flex justify-center items-center"
+				   target="_blank"
+				   rel="noopener"	  
+				>
+					<Badge>Disponible para trabajar</Badge>
+				<a/>
+			</h1>
+
+			<h2 class="text-2xl opacity-80 text-wrap">
+				<span>+6 meses de experiencia</span> como <span class=" text-yellow-200/90">Desarrollador Web.</span> <span class=" text-red-200/90">De Alicante, España.</span> <span class="opacity-75">Especializado en crear Aplicaciones Innovadoras y Eficientes.</span>
+			</h2>
+
+			<nav class="flex gap-x-4 mt-8">
+				<SocialPill href="https://www.linkedin.com/in/pablo-asensi-cano-405220219/">
+					<LinkedIn class=" w-6 h-6"/>
+					LinkedIn
+				</SocialPill >
+				<SocialPill href="https://github.com/AsensiDev">
+					<GitHub class=" w-6 h-6"/>
+					GitHub
+				</SocialPill>
+				<SocialPill href="https://www.youtube.com/channel/UCQQl7WNMScHD6tvP36J2KmA">
+					<YouTube class=" w-6 h-6"/>
+					YouTube
+				</SocialPill>
+			</nav>
+		</section>
+		
+	</main>
+</Layout>
+
