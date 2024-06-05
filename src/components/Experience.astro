@@ -1,0 +1,26 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: 'Marzo 2024 - Actualidad',
+        company: 'Higher Education Software',
+        title: 'Programador Web React & Tailwind',
+        description: 'Maquetación y desarrollo de páginas web con tecnologías como Html, Css, JavaScript, React, Firebase y Tailwind.'
+    },
+    {
+        date: 'Febrero 2024 - Marzo 2024',
+        company: 'Barmet Media',
+        title: 'Diseño de Interfaces Web con Wordpress & Elementor',
+        description: 'Desarrollo de Ecommerce para clientes de diversos sectores, maquetación y diseño con herramientas como Html, Css, Wordpress y Elementor.'
+    }
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700">      
+    {EXPERIENCE.map(experiencie => (
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...experiencie} />
+        </li>
+    ))}            
+</ol>
+

@@ -1,19 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
-import LinkedIn from '../components/icons/LinkedIn.astro';
-import GitHub from '../components/icons/GitHub.astro';
-import YouTube from '../components/icons/YouTube.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import GitHubIcon from '../components/icons/GitHub.astro';
+import YouTubeIcon from '../components/icons/YouTube.astro';
 import SocialPill from '../components/icons/SocialPill.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/Section.astro'
+import Briefcase from '../components/icons/Briefcase.astro';
+
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portfolio de AsensiDev - Desarrollador y Programador Web"
+		description="Contrata a asensidev para crea tu aplicación web o móvil."
+>
 	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44">
+		<SectionContainer class="pt-44 pb-24">
 			<img 
 				src="https://img-c.udemycdn.com/user/200_H/121794209_78af_10.jpg" 
 				alt="pablo photo"
-				class="rounded-full w-12 h-12 mb-4"
+				class="rounded-full size-12 mb-4"
 			>
 			<h1 class=" text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">Hey, soy AsensiDev 
 				<a href="https://www.linkedin.com/in/pablo-asensi-cano-405220219/"  
@@ -31,19 +37,27 @@ import SocialPill from '../components/icons/SocialPill.astro';
 
 			<nav class="flex gap-x-4 mt-8">
 				<SocialPill href="https://www.linkedin.com/in/pablo-asensi-cano-405220219/">
-					<LinkedIn class=" w-6 h-6"/>
+					<LinkedInIcon class="size-6"/>
 					LinkedIn
 				</SocialPill >
 				<SocialPill href="https://github.com/AsensiDev">
-					<GitHub class=" w-6 h-6"/>
+					<GitHubIcon class="size-6"/>
 					GitHub
 				</SocialPill>
 				<SocialPill href="https://www.youtube.com/channel/UCQQl7WNMScHD6tvP36J2KmA">
-					<YouTube class=" w-6 h-6"/>
+					<YouTubeIcon class="size-6"/>
 					YouTube
 				</SocialPill>
 			</nav>
-		</section>
+		</SectionContainer>
+
+		<SectionContainer  id="experiencia">
+			<h2 class=" text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-7" />
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
 		
 	</main>
 </Layout>
